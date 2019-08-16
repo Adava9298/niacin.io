@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- css link -->
+    <link href="https://fonts.googleapis.com/css?family=Cabin|Caveat|Noto+Serif+JP|Raleway:900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+    <meta charset="uft-8">
+    <header>
+        <div id="Firmenlogo">
+            <a href="index.html"><img src="bilder/Ohne Titel 3/Ohne Titel 3.001.png" alt="Firmenlogo" /></a>
+        </div>
+    </header>
+</head>
+
+
+<body>
+    <!-- nav -->
+    <div id="navbar">
+            <a href="index.html">Home</a>
+            <a href="news.html">News</a>
+            <div class="subnav">
+                <button class="dropbtn">Software</button>
+                <div class="dropcnt">
+                    <a href="java.html">Java</a>
+                    <a href="os.html">Unser OS</a>
+                    <a href="web.html">Web-Development</a>
+                </div>
+            </div>
+            <a href="ueberuns.html">Meet the Team</a>
+        </div>
+    <!-- nav end-->
+
+    <style>
+        .row div {
+            max-width: 33%;
+
+
+        }
+
+        .row {
+            margin: 2%;
+        }
+
+        .row div img {
+            filter: grayscale(0%)
+        }
+
+        .row div:hover {
+            transform: scale(1.1);
+            transition: 1.5s;
+        }
+
+        .row div:hover img {
+            filter: grayscale(50%);
+
+        }
+
+        .filterDiv {
+            float: left;
+
+
+            display: none;
+
+        }
+
+
+
+        .show {
+            display: block;
+        }
+
+        .container {
+            margin-top: 20px;
+            margin-bottom: 5%;
+            overflow: hidden;
+            min-width: 75%;
+        }
+
+        /* Style the buttons */
+        .btn {
+            border: none;
+            outline: none;
+            padding: 12px 16px;
+            background-color: rgb(31, 30, 30);
+            cursor: pointer;
+            color: white;
+        }
+
+        .btn:hover {
+            background-color: rgb(46, 44, 44);
+        }
+
+        .btn.active {
+            background: rgb(46, 44, 44);
+            color: white;
+        }
+
+        .scroll {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+        }
+
+        .scroll div {
+            justify-content: center;
+            margin-left: auto;
+            margin-right: auto;
+            min-width: 90%;
+        }
+
+
+        .f {
+            display: flex;
+            flex-direction: row;
+        }
+
+        #two {
+            display: flex;
+            flex-direction: column;
+            min-width: 20%;
+            margin: 10px;
+
+
+        }
+
+        #myBtnContainer #two {
+            position: sticky;
+            top: 50px;
+
+        }
+
+        #myBtnContainer {
+            min-width: 20%;
+        }
+    </style>
+
+
+    <!-- Main inhalt -->
+
+    <img src="bilder/5426CA90-41AD-4032-979D-A35796DC7D53.PNG" alt="OS PIC" class="banner">
+    <hr style="width: 90%;">
+
+
+    <div class="col" style="min-width: 90%; margin-left: auto; margin-right: auto;">
+        <div id="myBtnContainer">
+            <div id="two" style="width: 30%; margin-left: auto; margin-right: auto;">
+                <h1 style="text-align: center; color: rgb(31, 30, 30);"> - Filters - </h1>
+                <hr style="width: 70%;">
+                <button class="btn active" onclick="filterSelection('all')"> All Jobs</button>
+                <button class="btn" onclick="filterSelection('it')"> IT</button>
+                <button class="btn" onclick="filterSelection('hr')"> HR</button>
+                <button class="btn" onclick="filterSelection('cafe')"> Coffee</button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="filterDiv it">
+                <img src="Jobs/27A9A1C1-9AC8-4FC0-A777-8D37D9396F7A.PNG" alt="Web" class="job">
+            </div>
+            <div class="filterDiv it">
+                <img src="Jobs/2E68BDF3-B975-40A0-89AF-D8480874F587.PNG" alt="Python" class="job">
+            </div>
+            <div class="filterDiv it">
+                <img src="Jobs/FCD60FAD-497B-424B-9EA1-E9F15409F938.PNG" alt="Java" class="job">
+            </div>
+
+        </div>
+        <div class="row">
+            <div class="filterDiv hr">
+                <img src="Jobs/C4AA0193-CB23-4036-81FC-3C825C837076.PNG" alt="Law" class="job">
+            </div>
+            <div class="filterDiv hr">
+                <img src="Jobs/adobe-spark-post.png" alt="HR" class="job">
+            </div>
+
+            <div class="filterDiv hr">
+                <img src="Jobs/FDBA69E8-606F-4FA2-ADA0-F4F1B89A1652.PNG" alt="Social" class="job">
+            </div>
+        </div>
+        <div class="row">
+            <div class="filterDiv hr">
+                <img src="Jobs/FEB1DD3A-B3DF-42CC-A302-B3D025CCF0C5.PNG" alt="Marketing" class="job">
+            </div>
+
+            <div class="filterDiv hr">
+                <img src="Jobs/4F2C4029-F48D-47B9-B746-85525896CC4A.PNG" alt="CRM" class="job">
+            </div>
+            <div class="filterDiv hr">
+                <img src="Jobs/adobe-spark-post-3.png" alt="CS" class="job">
+            </div>
+        </div>
+        <div class="row">
+            <div class="filterDiv cafe">
+                <img src="Jobs/695DC24B-B7E2-4DA3-8B93-C956C906ED2F.PNG" alt="Barrista" class="job">
+            </div>
+            <div class="filterDiv cafe">
+                <img src="Jobs/adobe-spark-post-1.png" alt="Service" class="job">
+            </div>
+            <div class="filterDiv cafe">
+                <img src="Jobs/adobe-spark-post-2.png" alt="Kassierer" class="job">
+            </div>
+        </div>
+    </div>
+
+    <script>
+        filterSelection("all")
+        function filterSelection(c) {
+            var x, i;
+            x = document.getElementsByClassName("filterDiv");
+            if (c == "all") c = "";
+            for (i = 0; i < x.length; i++) {
+                w3RemoveClass(x[i], "show");
+                if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+            }
+        }
+
+        function w3AddClass(element, name) {
+            var i, arr1, arr2;
+            arr1 = element.className.split(" ");
+            arr2 = name.split(" ");
+            for (i = 0; i < arr2.length; i++) {
+                if (arr1.indexOf(arr2[i]) == -1) { element.className += " " + arr2[i]; }
+            }
+        }
+
+        function w3RemoveClass(element, name) {
+            var i, arr1, arr2;
+            arr1 = element.className.split(" ");
+            arr2 = name.split(" ");
+            for (i = 0; i < arr2.length; i++) {
+                while (arr1.indexOf(arr2[i]) > -1) {
+                    arr1.splice(arr1.indexOf(arr2[i]), 1);
+                }
+            }
+            element.className = arr1.join(" ");
+        }
+
+        // Add active class to the current button (highlight it)
+        var btnContainer = document.getElementById("myBtnContainer");
+        var btns = btnContainer.getElementsByClassName("btn");
+        for (var i = 0; i < btns.length; i++) {
+            btns[i].addEventListener("click", function () {
+                var current = document.getElementsByClassName("active");
+                current[0].className = current[0].className.replace(" active", "");
+                this.className += " active";
+            });
+        }
+    </script>
+    <!-- main end -->
+
+
+
+
+    <!-- footer -->
+    <div id="footer">
+            <div class="relevantLinks">
+                <a href="impressum.html">Impressum/Disclaimer</a>
+                <a href="datenschutz.html">Datenschutzerklärung</a>
+                <a href="kontakt.html">Kontakt</a>
+                <a href="karriere.html">Jobs & Karriere</a>
+                <p id="copy"><strong>NIACIN IT GmbH</strong> &copy;2019</p>
+            </div>
+        </div>
+    <!-- footer end -->
+
+
+</body>
+
+</html>
